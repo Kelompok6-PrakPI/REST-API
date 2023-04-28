@@ -105,4 +105,5 @@ module.exports = {
 
     //gideon
     //sekarang jam 10.09
+    //sekarang tanggal 28 april 2023
 }
