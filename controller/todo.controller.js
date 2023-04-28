@@ -104,5 +104,5 @@ module.exports = {
 
 
     //gideon
-    //sekarang jam 09.40
+    //sekarang jam 10.09
 }
