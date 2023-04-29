@@ -51,28 +51,6 @@ module.exports = {
         }
     },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     deleteTodoByID: async (req, res) => {
         try{
             const { id } = req.params
@@ -98,29 +76,33 @@ module.exports = {
         }
     },
 
+    addTodo: async (req, res) => {
+        try{
+            const { name,deadline,isDone } = req.body 
+                
+            const todo = await Todo.create({
+                name,
+                deadline,
+                isDone
+            })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            res.status(201).json({
+                status:201,
+                message: "todo has been created",
+                data : todo
+            })
+        }catch(err){
+            res.status(500).json({
+                status: 500,
+                message: "Internal Server Error"
+            })
+        }
+       
+    }
 
     //carel
+
+
 
 
 
@@ -164,34 +146,5 @@ module.exports = {
 
 
 
-
-
-
-
-
-
     
-    addTodo: async (req, res) => {
-        try{
-            const { name,deadline,isDone } = req.body 
-                
-            const todo = await Todo.create({
-                name,
-                deadline,
-                isDone
-            })
-
-            res.status(201).json({
-                status:201,
-                message: "todo has been created",
-                data : todo
-            })
-        }catch(err){
-            res.status(500).json({
-                status: 500,
-                message: "Internal Server Error"
-            })
-        }
-       
-    }
 }

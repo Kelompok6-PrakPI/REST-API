@@ -8,7 +8,7 @@ const todoSchema = new Schema({
         required: true,
     },
     deadline: {
-        type: date,
+        type: Date,
         required: true
     },
     isDone:{
