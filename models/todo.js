@@ -7,8 +7,13 @@ const todoSchema = new Schema({
         type:String,
         required: true,
     },
+    deadline: {
+        type: date,
+        required: true
+    },
     isDone:{
-        type:Boolean
+        type:Boolean,
+        required: true
     }
 })
 
