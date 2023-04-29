@@ -3,7 +3,7 @@ const Todo = require('../models/todo')
 module.exports = {
 
 
-    //farhan
+    
     getAllTodo: async (req, res) => {
         try{
            const todo = await Todo.find()
@@ -148,7 +148,28 @@ module.exports = {
 
 
 
-    //gideon
-    //sekarang jam 10.09
-    //sekarang tanggal 28 april 2023
+    
+    addTodo: async (req, res) => {
+        try{
+            const { name,deadline,isDone } = req.body 
+                
+            const todo = await Todo.create({
+                name,
+                deadline,
+                isDone
+            })
+
+            res.status(201).json({
+                status:201,
+                message: "todo has been created",
+                data : todo
+            })
+        }catch(err){
+            res.status(500).json({
+                status: 500,
+                message: "Internal Server Error"
+            })
+        }
+       
+    }
 }
