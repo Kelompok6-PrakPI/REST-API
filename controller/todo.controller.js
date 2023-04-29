@@ -73,8 +73,30 @@ module.exports = {
 
 
 
-    //gembira
-    //testgembira
+    deleteTodoByID: async (req, res) => {
+        try{
+            const { id } = req.params
+            const deletedTodo = await Todo.findByIdAndDelete(id);
+    
+            if (!deletedTodo) {
+                res.status(404).json({
+                    status: 404,
+                    message: `Todo with id ${id} is not found`
+                })
+            } else {
+                res.status(200).json({
+                    status: 200,
+                    message: "Todo has been deleted",
+                    data: deletedTodo
+                })
+            }
+        }catch(err){
+            res.status(500).json({
+                status: 500,
+                message: "Internal Server Error"
+            })
+        }
+    },
 
 
 
