@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0",
+    "nodemon": "^2.0.22"
+  },
+  "name": "rest-api",
+  "description": "1. Farhan Yehanda 201402137\r 2. Gembira Raymondo Simanullang (201402125)\r 3. Gideon Tulus Hatta Yuda Siahaan (201402116)\r 4. Carel Ralph PA (201402152)\r 5. Abi Rafdi Rahmad(201402131)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kelompok6-PrakPI/REST-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kelompok6-PrakPI/REST-API/issues"
+  },
+  "homepage": "https://github.com/Kelompok6-PrakPI/REST-API#readme"
+}
