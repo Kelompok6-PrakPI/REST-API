@@ -1,9 +1,6 @@
 const Todo = require('../models/todo')
 
-module.exports = {
-
-
-    
+module.exports = {    
     getAllTodo: async (req, res) => {
         try{
            const todo = await Todo.find()
@@ -99,8 +96,6 @@ module.exports = {
         }
        
     },
-    
-    //abi
     updateTodoByID: async (req, res) => {
         try{
             const { id } = req.params
@@ -127,8 +122,6 @@ module.exports = {
             })
         }
     },    
-
-    //carel
     deleteAllTodo: async (req, res) => {
         try{
             const todo = await Todo.deleteMany()
@@ -151,6 +144,4 @@ module.exports = {
             })
         }
     }
-    
-
 }
