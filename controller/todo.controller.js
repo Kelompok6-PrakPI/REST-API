@@ -98,53 +98,37 @@ module.exports = {
             })
         }
        
-    }
+    },
+    
+    //abi
+    updateTodoByID: async (req, res) => {
+        try{
+            const { id } = req.params
+            const updated = req.body
+
+            const result = await Todo.findByIdAndUpdate(id, updated)
+            
+            if (!result) {
+                return res.status(404).json({
+                    status: 404,
+                    message: `Todo with id ${id} is not found`
+                });
+            }
+
+            const updatedTodo = await Todo.findById(id)
+            res.status(200).json({
+                message:"todo has been updated",
+                data : updatedTodo
+            })
+        }catch(err){
+            res.status(500).json({
+                status: 500,
+                message: "Internal Server Error"
+            })
+        }
+    },    
 
     //carel
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //abi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
+
 }
