@@ -107,7 +107,7 @@
 ```
 
 ### deleteTodoById
-
+### Enpoint ini berfungsi untuk menghapus data todo berdasarkan ID
 `REQUEST`
 
 * Method : DELETE
@@ -137,7 +137,7 @@
 ```
 
 ### deleteAllTodo
-
+### Enpoint ini berfungsi untuk menghapus semua data todo 
 `REQUEST`
 
 * Method : DELETE
@@ -166,6 +166,7 @@
 ```
 
 ### updateTodoByID
+### Enpoint ini berfungsi untuk mengupdate data todo berdasarkan ID
 
 `REQUEST`
 
